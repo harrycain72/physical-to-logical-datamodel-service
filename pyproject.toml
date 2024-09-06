@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "physical-to-logical-datamodel-service"
+version = "0.1.0"
+description = ""
+authors = ["Roland <harry.cain72@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+loguru = "^0.7.2"
+langchain-openai = "^0.1.23"
+langchain = "^0.2.15"
+langchain-anthropic = "^0.1.23"
+sqlalchemy = "^2.0.32"
+plantuml = "^0.3.0"
+six = "^1.16.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

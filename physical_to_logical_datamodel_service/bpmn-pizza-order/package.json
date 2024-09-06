@@ -1,0 +1,17 @@
+{
+  "name": "bpmn-pizza-order",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "bpmn-js": "^17.9.2",
+    "bpmn-moddle": "^9.0.1",
+    "express": "^4.19.2"
+  }
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pizza Order BPMN</title>
+  <link rel="stylesheet" href="https://unpkg.com/bpmn-js@9.0.3/dist/assets/bpmn-js.css">
+  <style>
+    #canvas { height: 100vh; }
+  </style>
+</head>
+<body>
+  <div id="canvas"></div>
+
+  <script src="https://unpkg.com/bpmn-js@9.0.3/dist/bpmn-viewer.production.min.js"></script>
+  <script>
+    const viewer = new BpmnJS({ container: '#canvas' });
+
+    fetch('pizza_order_process.bpmn')
+      .then(response => response.text())
+      .then(xml => {
+        viewer.importXML(xml, function(err) {
+          if (err) {
+            console.error('Error rendering the diagram', err);
+          } else {
+            const canvas = viewer.get('canvas');
+            canvas.zoom('fit-viewport');
+          }
+        });
+      })
+      .catch(err => console.error('Error loading the BPMN file', err));
+  </script>
+</body>
+</html>

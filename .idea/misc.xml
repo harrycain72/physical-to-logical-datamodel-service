@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Black">
+    <option name="sdkName" value="Poetry (physical-to-logical-datamodel-service)" />
+  </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="Poetry (physical-to-logical-datamodel-service)" project-jdk-type="Python SDK" />
+</project>

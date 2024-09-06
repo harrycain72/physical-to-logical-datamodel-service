@@ -1,0 +1,518 @@
+2024-08-31 11:58:22.784 | ERROR    | __main__:generate_logical_model:70 - Error generating logical model: name 'llm' is not defined
+2024-08-31 11:58:57.287 | ERROR    | __main__:generate_logical_model:70 - Error generating logical model: 'RunnableSequence' object has no attribute 'arun'
+2024-08-31 12:00:27.863 | ERROR    | __main__:generate_logical_model:71 - Error generating logical model: RunnableSequence.ainvoke() missing 1 required positional argument: 'input'
+2024-08-31 12:05:54.481 | ERROR    | __main__:generate_logical_model:72 - Error generating logical model: RunnableSequence.invoke() missing 1 required positional argument: 'input'
+2024-08-31 12:08:12.432 | INFO     | __main__:generate_logical_model:43 - Generating logical model for database: sqlite:///northwind.db
+2024-08-31 12:08:18.800 | SUCCESS  | __main__:generate_logical_model:74 - Logical model generated successfully
+2024-08-31 12:10:52.775 | INFO     | __main__:generate_logical_model:43 - Generating logical model for database: sqlite:///northwind.db
+2024-08-31 12:10:57.932 | SUCCESS  | __main__:generate_logical_model:99 - Logical model generated successfully
+2024-08-31 12:11:40.315 | INFO     | __main__:generate_logical_model:43 - Generating logical model for database: sqlite:///northwind.db
+2024-08-31 12:11:46.060 | SUCCESS  | __main__:generate_logical_model:99 - Logical model generated successfully
+2024-08-31 12:13:01.211 | INFO     | __main__:generate_logical_model:43 - Generating logical model for database: sqlite:///northwind.db
+2024-08-31 12:13:06.441 | SUCCESS  | __main__:generate_logical_model:99 - Logical model generated successfully
+2024-08-31 12:14:31.673 | INFO     | __main__:generate_logical_model:43 - Generating business-oriented logical model for database: sqlite:///northwind.db
+2024-08-31 12:14:35.215 | SUCCESS  | __main__:generate_logical_model:119 - Logical model generated successfully
+2024-08-31 12:34:44.484 | INFO     | __main__:generate_logical_model:149 - Generating business-oriented logical model for database: sqlite:///northwind.db
+2024-08-31 12:34:48.952 | SUCCESS  | __main__:generate_logical_model:168 - Logical model generated successfully
+2024-08-31 12:47:18.876 | INFO     | __main__:generate_logical_model:192 - Generating business-oriented logical model for database: sqlite:///northwind.db
+2024-08-31 12:47:18.906 | ERROR    | __main__:generate_logical_model:215 - Error generating logical model: 'Input to PromptTemplate is missing variables {"\\n        \'   <<PK>> id "}.  Expected: ["\\n        \'   <<PK>> id ", \'table_info\'] Received: [\'table_info\']\nNote: if you intended {\n        \'   <<PK>> id } to be part of the string and not a variable, please escape it with double curly braces like: \'{{\n        \'   <<PK>> id }}\'.'
+2024-08-31 12:48:06.459 | INFO     | __main__:generate_logical_model:192 - Generating UML class diagram for database: sqlite:///northwind.db
+2024-08-31 12:48:06.489 | ERROR    | __main__:generate_logical_model:253 - Error generating logical model: 'Input to PromptTemplate is missing variables {"\\n        \'   <<PK>> id "}.  Expected: ["\\n        \'   <<PK>> id ", \'table_info\'] Received: [\'table_info\']\nNote: if you intended {\n        \'   <<PK>> id } to be part of the string and not a variable, please escape it with double curly braces like: \'{{\n        \'   <<PK>> id }}\'.'
+2024-08-31 12:49:37.511 | INFO     | __main__:generate_logical_model:192 - Generating UML class diagram for database: sqlite:///northwind.db
+2024-08-31 12:49:44.844 | SUCCESS  | __main__:generate_logical_model:249 - Logical model generated successfully
+2024-08-31 12:49:44.845 | INFO     | __main__:visualize_uml:259 - Visualizing UML diagram
+2024-08-31 12:49:44.845 | ERROR    | __main__:visualize_uml:265 - Error visualizing UML diagram: name 'plantuml' is not defined
+Traceback (most recent call last):
+
+  File "/Users/roli/development/workspaces/ai-services/physical-to-logical-datamodel-service/physical_to_logical_datamodel_service/app.py", line 289, in <module>
+    asyncio.run(main())
+    │       │   └ <function main at 0x103b297e0>
+    │       └ <function run at 0x102758040>
+    └ <module 'asyncio' from '/opt/homebrew/Cellar/python@3.10/3.10.14_1/Frameworks/Python.framework/Versions/3.10/lib/python3.10/a...
+
+  File "/opt/homebrew/Cellar/python@3.10/3.10.14_1/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+           │    │                  └ <coroutine object main at 0x103ada730>
+           │    └ <function BaseEventLoop.run_until_complete at 0x102964dc0>
+           └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+
+  File "/opt/homebrew/Cellar/python@3.10/3.10.14_1/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x102964d30>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+
+  File "/opt/homebrew/Cellar/python@3.10/3.10.14_1/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x102966830>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+
+  File "/opt/homebrew/Cellar/python@3.10/3.10.14_1/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 1909, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x102912200>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+
+  File "/opt/homebrew/Cellar/python@3.10/3.10.14_1/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+
+  File "/Users/roli/development/workspaces/ai-services/physical-to-logical-datamodel-service/physical_to_logical_datamodel_service/app.py", line 282, in main
+    visualize_uml(result)
+    │             └ '@startuml\nskinparam classAttributeIconSize 0\n\nclass Categories {\n  <<PK>> CategoryID : INTEGER\n  CategoryName : TEXT\n ...
+    └ <function visualize_uml at 0x103b29750>
+
+> File "/Users/roli/development/workspaces/ai-services/physical-to-logical-datamodel-service/physical_to_logical_datamodel_service/app.py", line 260, in visualize_uml
+    puml = plantuml.PlantUML(url='http://www.plantuml.com/plantuml/png/')
+
+NameError: name 'plantuml' is not defined
+2024-08-31 12:51:50.122 | INFO     | __main__:generate_logical_model:192 - Generating UML class diagram for database: sqlite:///northwind.db
+2024-08-31 12:51:56.486 | SUCCESS  | __main__:generate_logical_model:249 - Logical model generated successfully
+2024-08-31 12:51:56.487 | INFO     | __main__:visualize_uml:259 - Visualizing UML diagram
+2024-08-31 12:51:57.709 | ERROR    | __main__:visualize_uml:265 - Error visualizing UML diagram: [Errno 2] No such file or directory: 'class_diagram.png'
+Traceback (most recent call last):
+
+  File "/Users/roli/development/workspaces/ai-services/physical-to-logical-datamodel-service/physical_to_logical_datamodel_service/app.py", line 289, in <module>
+    asyncio.run(main())
+    │       │   └ <function main at 0x107548ee0>
+    │       └ <function run at 0x106238040>
+    └ <module 'asyncio' from '/opt/homebrew/Cellar/python@3.10/3.10.14_1/Frameworks/Python.framework/Versions/3.10/lib/python3.10/a...
+
+  File "/opt/homebrew/Cellar/python@3.10/3.10.14_1/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+           │    │                  └ <coroutine object main at 0x1073fb060>
+           │    └ <function BaseEventLoop.run_until_complete at 0x1062c0dc0>
+           └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+
+  File "/opt/homebrew/Cellar/python@3.10/3.10.14_1/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x1062c0d30>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+
+  File "/opt/homebrew/Cellar/python@3.10/3.10.14_1/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x1062c2830>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+
+  File "/opt/homebrew/Cellar/python@3.10/3.10.14_1/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 1909, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x10626e200>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+
+  File "/opt/homebrew/Cellar/python@3.10/3.10.14_1/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+
+  File "/Users/roli/development/workspaces/ai-services/physical-to-logical-datamodel-service/physical_to_logical_datamodel_service/app.py", line 282, in main
+    visualize_uml(result)
+    │             └ '@startuml\nskinparam classAttributeIconSize 0\n\nclass Categories {\n  <<PK>> CategoryID : INTEGER\n  CategoryName : TEXT\n ...
+    └ <function visualize_uml at 0x107549090>
+
+> File "/Users/roli/development/workspaces/ai-services/physical-to-logical-datamodel-service/physical_to_logical_datamodel_service/app.py", line 262, in visualize_uml
+    puml.processes_file(output_file)
+    │    │              └ 'class_diagram.png'
+    │    └ <function PlantUML.processes_file at 0x107548d30>
+    └ <plantuml.PlantUML object at 0x108443d60>
+
+  File "/Users/roli/Library/Caches/pypoetry/virtualenvs/physical-to-logical-datamodel-service-z7MxplmH-py3.10/lib/python3.10/site-packages/plantuml.py", line 197, in processes_file
+    data = open(filename).read()
+           │    └ 'class_diagram.png'
+           └ <built-in function open>
+
+FileNotFoundError: [Errno 2] No such file or directory: 'class_diagram.png'
+2024-08-31 12:54:08.071 | INFO     | __main__:generate_logical_model:192 - Generating UML class diagram for database: sqlite:///northwind.db
+2024-08-31 12:54:14.626 | SUCCESS  | __main__:generate_logical_model:249 - Logical model generated successfully
+2024-08-31 12:54:14.627 | INFO     | __main__:visualize_uml:259 - Visualizing UML diagram
+2024-08-31 12:54:14.627 | ERROR    | __main__:visualize_uml:264 - Error visualizing UML diagram: PlantUML.processes() got an unexpected keyword argument 'outfile'
+Traceback (most recent call last):
+
+  File "/Users/roli/development/workspaces/ai-services/physical-to-logical-datamodel-service/physical_to_logical_datamodel_service/app.py", line 288, in <module>
+    asyncio.run(main())
+    │       │   └ <function main at 0x107935000>
+    │       └ <function run at 0x106624040>
+    └ <module 'asyncio' from '/opt/homebrew/Cellar/python@3.10/3.10.14_1/Frameworks/Python.framework/Versions/3.10/lib/python3.10/a...
+
+  File "/opt/homebrew/Cellar/python@3.10/3.10.14_1/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+           │    │                  └ <coroutine object main at 0x1077e6ff0>
+           │    └ <function BaseEventLoop.run_until_complete at 0x1066acdc0>
+           └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+
+  File "/opt/homebrew/Cellar/python@3.10/3.10.14_1/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x1066acd30>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+
+  File "/opt/homebrew/Cellar/python@3.10/3.10.14_1/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x1066ae830>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+
+  File "/opt/homebrew/Cellar/python@3.10/3.10.14_1/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 1909, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x10665a200>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+
+  File "/opt/homebrew/Cellar/python@3.10/3.10.14_1/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+
+  File "/Users/roli/development/workspaces/ai-services/physical-to-logical-datamodel-service/physical_to_logical_datamodel_service/app.py", line 281, in main
+    visualize_uml(result)
+    │             └ '@startuml\nskinparam classAttributeIconSize 0\n\nclass Categories {\n  <<PK>> CategoryID : INTEGER\n  CategoryName : TEXT\n ...
+    └ <function visualize_uml at 0x1079351b0>
+
+> File "/Users/roli/development/workspaces/ai-services/physical-to-logical-datamodel-service/physical_to_logical_datamodel_service/app.py", line 261, in visualize_uml
+    puml.processes(plantuml_code, outfile=output_file)
+    │    │         │                      └ 'class_diagram.png'
+    │    │         └ '@startuml\nskinparam classAttributeIconSize 0\n\nclass Categories {\n  <<PK>> CategoryID : INTEGER\n  CategoryName : TEXT\n ...
+    │    └ <function PlantUML.processes at 0x107934dc0>
+    └ <plantuml.PlantUML object at 0x1084678e0>
+
+TypeError: PlantUML.processes() got an unexpected keyword argument 'outfile'
+2024-08-31 12:55:14.755 | INFO     | __main__:generate_logical_model:192 - Generating UML class diagram for database: sqlite:///northwind.db
+2024-08-31 12:55:21.232 | SUCCESS  | __main__:generate_logical_model:249 - Logical model generated successfully
+2024-08-31 12:55:21.233 | INFO     | __main__:visualize_uml:259 - Visualizing UML diagram
+2024-08-31 12:55:22.400 | SUCCESS  | __main__:visualize_uml:262 - UML diagram saved as class_diagram.png
+2024-08-31 13:01:00.328 | INFO     | __main__:generate_logical_model:192 - Generating UML class diagram for database: sqlite:///northwind.db
+2024-08-31 13:01:06.430 | SUCCESS  | __main__:generate_logical_model:249 - Logical model generated successfully
+2024-08-31 13:01:06.430 | INFO     | __main__:visualize_uml:259 - Visualizing UML diagram
+2024-08-31 13:01:06.430 | ERROR    | __main__:visualize_uml:271 - Error visualizing UML diagram: name 'requests' is not defined
+Traceback (most recent call last):
+
+  File "/Users/roli/development/workspaces/ai-services/physical-to-logical-datamodel-service/physical_to_logical_datamodel_service/app.py", line 296, in <module>
+    asyncio.run(main())
+    │       │   └ <function main at 0x106009000>
+    │       └ <function run at 0x1047ac040>
+    └ <module 'asyncio' from '/opt/homebrew/Cellar/python@3.10/3.10.14_1/Frameworks/Python.framework/Versions/3.10/lib/python3.10/a...
+
+  File "/opt/homebrew/Cellar/python@3.10/3.10.14_1/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+           │    │                  └ <coroutine object main at 0x105ebaff0>
+           │    └ <function BaseEventLoop.run_until_complete at 0x104cd8dc0>
+           └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+
+  File "/opt/homebrew/Cellar/python@3.10/3.10.14_1/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x104cd8d30>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+
+  File "/opt/homebrew/Cellar/python@3.10/3.10.14_1/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x104cda830>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+
+  File "/opt/homebrew/Cellar/python@3.10/3.10.14_1/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 1909, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x104c86200>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+
+  File "/opt/homebrew/Cellar/python@3.10/3.10.14_1/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+
+  File "/Users/roli/development/workspaces/ai-services/physical-to-logical-datamodel-service/physical_to_logical_datamodel_service/app.py", line 289, in main
+    visualize_uml(result)
+    │             └ '@startuml\nskinparam classAttributeIconSize 0\n\nclass Categories {\n  <<PK>> CategoryID : INTEGER\n  CategoryName : TEXT\n ...
+    └ <function visualize_uml at 0x1060091b0>
+
+> File "/Users/roli/development/workspaces/ai-services/physical-to-logical-datamodel-service/physical_to_logical_datamodel_service/app.py", line 261, in visualize_uml
+    response = requests.post(puml_url, data=plantuml_code.encode('utf-8'))
+                             │              │             └ <method 'encode' of 'str' objects>
+                             │              └ '@startuml\nskinparam classAttributeIconSize 0\n\nclass Categories {\n  <<PK>> CategoryID : INTEGER\n  CategoryName : TEXT\n ...
+                             └ 'http://www.plantuml.com/plantuml/png/'
+
+NameError: name 'requests' is not defined
+2024-08-31 13:01:22.112 | INFO     | __main__:generate_logical_model:193 - Generating UML class diagram for database: sqlite:///northwind.db
+2024-08-31 13:01:29.654 | SUCCESS  | __main__:generate_logical_model:250 - Logical model generated successfully
+2024-08-31 13:01:29.655 | INFO     | __main__:visualize_uml:260 - Visualizing UML diagram
+2024-08-31 13:01:30.553 | SUCCESS  | __main__:visualize_uml:267 - UML diagram saved as class_diagram.png
+2024-08-31 13:05:22.343 | INFO     | __main__:generate_logical_model:193 - Generating UML class diagram for database: sqlite:///northwind.db
+2024-08-31 13:05:29.462 | SUCCESS  | __main__:generate_logical_model:250 - Logical model generated successfully
+2024-08-31 13:05:29.462 | INFO     | __main__:visualize_uml:260 - Visualizing UML diagram
+2024-08-31 13:05:30.375 | SUCCESS  | __main__:visualize_uml:267 - UML diagram saved as class_diagram.png
+2024-08-31 13:08:57.629 | INFO     | __main__:generate_logical_model:193 - Generating UML class diagram for database: sqlite:///northwind.db
+2024-08-31 13:09:04.408 | SUCCESS  | __main__:generate_logical_model:250 - Logical model generated successfully
+2024-08-31 13:09:04.409 | INFO     | __main__:visualize_uml:260 - Visualizing UML diagram
+2024-08-31 13:09:05.415 | SUCCESS  | __main__:visualize_uml:267 - UML diagram saved as class_diagram.png
+2024-08-31 13:11:31.014 | INFO     | __main__:generate_logical_model:192 - Generating UML class diagram for database: sqlite:///northwind.db
+2024-08-31 13:11:36.690 | SUCCESS  | __main__:generate_logical_model:249 - Logical model generated successfully
+2024-08-31 13:11:36.691 | INFO     | __main__:visualize_uml:259 - Visualizing UML diagram
+2024-08-31 13:11:37.697 | ERROR    | __main__:visualize_uml:269 - Failed to generate UML diagram: 200, Content-Type: text/html;charset=utf-8
+2024-08-31 13:12:51.467 | INFO     | __main__:generate_logical_model:193 - Generating UML class diagram for database: sqlite:///northwind.db
+2024-08-31 13:12:57.790 | SUCCESS  | __main__:generate_logical_model:250 - Logical model generated successfully
+2024-08-31 13:12:57.791 | INFO     | __main__:visualize_uml:265 - Visualizing UML diagram
+2024-08-31 13:12:57.882 | ERROR    | __main__:visualize_uml:277 - Failed to generate UML diagram: 404, Content-Type: text/html; charset=iso-8859-1
+2024-08-31 13:12:57.883 | ERROR    | __main__:visualize_uml:281 - Error visualizing UML diagram: 404 Client Error: Not Found for url: http://www.plantuml.com/plantuml/png/%D5VMo%DB0%0C%BD%FBW%089%0Eh%D1%5D%8D%A0h%9A8m%B0%20%F1%9Cl%D8-Pm%CE%11jK%9ED%17M%87%FD%F7I%8E%FC%21G%05v%D9%A1%27G%8F%F43%F9%F8L%E7N%21%95X%97E%A0%9E%19%AF%A8%A4%25I%0B%AA%D4%0CQ%B2%A7%1Aa%95%0A%BEco%40n%82%A0%89%909E%C8%85d%A0%C8%EF%80%90%E94%FEr%7B%DB%A2%A7%D5%82%84d%B5%D9G%0FQ%A2%A3-%BC%A1%25%E8%C0%3E%FA%B1%D7%E8%02T%2AY%85L%F0%16%FC%D3%D1%D7%0AE%09%D2e%B7%60%C3nI%E6%A2%AC%28%1F1%CF%05G%9A%A2%17%DC3%2C%06%E8%2C%CB%24%E8%07%F6i%0CO%FD%29%81%7CP%1E%21%B1%D0Z%15s%919%C45G9%B8%29%3E%0A%3E%88/%E9%EBE%7FQY%15%E2%04%AEz-8RoM%D5%A8%95%25%93ch%D4Vs%DC%FE%D4%A5I%045%A8%ED%9EI%3C.%F4%3Cz%E8%91Ip%91%FF%21%CA%A3%9E%DCH%98%E8%15%81%2B%87j%23t%B9%FDq%3A%5D%1Aa%12%A8%84D%B5%17%03%5D%3A%29%B72%03%B9%00%A4%ACp%D4l%F0%91%94%96/%96%22%ABS%1C%05%BFq%86%B1d%A9%A90%89fk%0D%7D%AD%29%C7s%EF%7D%DE%82%A9%D4t%D7%A6%B9%95%FCk%0D%3E3%DB%D0%3B%3E87%EA%0C%2A%81_%B5%9E%5E%E6%A2%BB%23%AB%2A%1F%F8%9DQ%87q%29%81%E5G%EC%FB5I%AE%AF%0Cra%07%03%BA%960%C8%D8%16%06%F3Y%A3%B9%DB%B5G%27%A1%9D%8C%23%A2%7FZ%16u%AB%B5%02%EE%EA%AA%2A%D8%BB%CA%FB%97T%3B%EB%18%A4qBO%EA%F1%85%81%D4%8A%EFP%A4%CF%17%1ER%5B%DE%8C%CA%09%24%20%0C%B6%86%17%28.%DD%A4%1F%CCk%C8%7C%F6%3E%0F%D3%B5%95%C5%C6%5B%D6%B7%0A%9DW%AE%27%B5%02%B9%AC~%D5%3E%D6%86%B5%8B%86%E6%C3%A6%ED%8B9%F9%3C%21WWd%F2i%E2.%8D%F0%5C9%E3%2Ap%F06__%3A_jexZ%D4%19%A81%AB%BE%F4_%AD%90%DCC%21x%AE%0E%28%3C%89%FD%FA%0F%C9L%29%96s%C8%FC%99%DD%F8%C3%F6%B5%3E%BC0%1At%F5%0CS%BB%A1%86%ED%EF%EC%F0t%F2%E6%0E%3E%DFawx%D3%F9T%05%7Dq%93%9B%EBk%7F%D1v%23%9B%9A%83%3B%E0%99%FE%F3%F0%17
+Traceback (most recent call last):
+
+  File "/Users/roli/development/workspaces/ai-services/physical-to-logical-datamodel-service/physical_to_logical_datamodel_service/app.py", line 306, in <module>
+    asyncio.run(main())
+    │       │   └ <function main at 0x1078c57e0>
+    │       └ <function run at 0x106388160>
+    └ <module 'asyncio' from '/opt/homebrew/Cellar/python@3.10/3.10.14_1/Frameworks/Python.framework/Versions/3.10/lib/python3.10/a...
+
+  File "/opt/homebrew/Cellar/python@3.10/3.10.14_1/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+           │    │                  └ <coroutine object main at 0x107876880>
+           │    └ <function BaseEventLoop.run_until_complete at 0x1068b4ee0>
+           └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+
+  File "/opt/homebrew/Cellar/python@3.10/3.10.14_1/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x1068b4e50>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+
+  File "/opt/homebrew/Cellar/python@3.10/3.10.14_1/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x1068b6950>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+
+  File "/opt/homebrew/Cellar/python@3.10/3.10.14_1/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 1909, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x106862320>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+
+  File "/opt/homebrew/Cellar/python@3.10/3.10.14_1/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+
+  File "/Users/roli/development/workspaces/ai-services/physical-to-logical-datamodel-service/physical_to_logical_datamodel_service/app.py", line 299, in main
+    visualize_uml(result)
+    │             └ '@startuml\nskinparam classAttributeIconSize 0\n\nclass Categories {\n  <<PK>> CategoryID : INTEGER\n  CategoryName : TEXT\n ...
+    └ <function visualize_uml at 0x1078c5900>
+
+> File "/Users/roli/development/workspaces/ai-services/physical-to-logical-datamodel-service/physical_to_logical_datamodel_service/app.py", line 279, in visualize_uml
+    response.raise_for_status()
+    │        └ <function Response.raise_for_status at 0x1062acee0>
+    └ <Response [404]>
+
+  File "/Users/roli/Library/Caches/pypoetry/virtualenvs/physical-to-logical-datamodel-service-z7MxplmH-py3.10/lib/python3.10/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+          │         │                        └ <Response [404]>
+          │         └ '404 Client Error: Not Found for url: http://www.plantuml.com/plantuml/png/%D5VMo%DB0%0C%BD%FBW%089%0Eh%D1%5D%8D%A0h%9A8m%B0%...
+          └ <class 'requests.exceptions.HTTPError'>
+
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: http://www.plantuml.com/plantuml/png/%D5VMo%DB0%0C%BD%FBW%089%0Eh%D1%5D%8D%A0h%9A8m%B0%20%F1%9Cl%D8-Pm%CE%11jK%9ED%17M%87%FD%F7I%8E%FC%21G%05v%D9%A1%27G%8F%F43%F9%F8L%E7N%21%95X%97E%A0%9E%19%AF%A8%A4%25I%0B%AA%D4%0CQ%B2%A7%1Aa%95%0A%BEco%40n%82%A0%89%909E%C8%85d%A0%C8%EF%80%90%E94%FEr%7B%DB%A2%A7%D5%82%84d%B5%D9G%0FQ%A2%A3-%BC%A1%25%E8%C0%3E%FA%B1%D7%E8%02T%2AY%85L%F0%16%FC%D3%D1%D7%0AE%09%D2e%B7%60%C3nI%E6%A2%AC%28%1F1%CF%05G%9A%A2%17%DC3%2C%06%E8%2C%CB%24%E8%07%F6i%0CO%FD%29%81%7CP%1E%21%B1%D0Z%15s%919%C45G9%B8%29%3E%0A%3E%88/%E9%EBE%7FQY%15%E2%04%AEz-8RoM%D5%A8%95%25%93ch%D4Vs%DC%FE%D4%A5I%045%A8%ED%9EI%3C.%F4%3Cz%E8%91Ip%91%FF%21%CA%A3%9E%DCH%98%E8%15%81%2B%87j%23t%B9%FDq%3A%5D%1Aa%12%A8%84D%B5%17%03%5D%3A%29%B72%03%B9%00%A4%ACp%D4l%F0%91%94%96/%96%22%ABS%1C%05%BFq%86%B1d%A9%A90%89fk%0D%7D%AD%29%C7s%EF%7D%DE%82%A9%D4t%D7%A6%B9%95%FCk%0D%3E3%DB%D0%3B%3E87%EA%0C%2A%81_%B5%9E%5E%E6%A2%BB%23%AB%2A%1F%F8%9DQ%87q%29%81%E5G%EC%FB5I%AE%AF%0Cra%07%03%BA%960%C8%D8%16%06%F3Y%A3%B9%DB%B5G%27%A1%9D%8C%23%A2%7FZ%16u%AB%B5%02%EE%EA%AA%2A%D8%BB%CA%FB%97T%3B%EB%18%A4qBO%EA%F1%85%81%D4%8A%EFP%A4%CF%17%1ER%5B%DE%8C%CA%09%24%20%0C%B6%86%17%28.%DD%A4%1F%CCk%C8%7C%F6%3E%0F%D3%B5%95%C5%C6%5B%D6%B7%0A%9DW%AE%27%B5%02%B9%AC~%D5%3E%D6%86%B5%8B%86%E6%C3%A6%ED%8B9%F9%3C%21WWd%F2i%E2.%8D%F0%5C9%E3%2Ap%F06__%3A_jexZ%D4%19%A81%AB%BE%F4_%AD%90%DCC%21x%AE%0E%28%3C%89%FD%FA%0F%C9L%29%96s%C8%FC%99%DD%F8%C3%F6%B5%3E%BC0%1At%F5%0CS%BB%A1%86%ED%EF%EC%F0t%F2%E6%0E%3E%DFawx%D3%F9T%05%7Dq%93%9B%EBk%7F%D1v%23%9B%9A%83%3B%E0%99%FE%F3%F0%17
+2024-08-31 13:14:50.689 | INFO     | __main__:generate_logical_model:193 - Generating UML class diagram for database: sqlite:///northwind.db
+2024-08-31 13:14:57.326 | SUCCESS  | __main__:generate_logical_model:250 - Logical model generated successfully
+2024-08-31 13:14:57.326 | INFO     | __main__:visualize_uml:265 - Visualizing UML diagram
+2024-08-31 13:14:58.139 | SUCCESS  | __main__:visualize_uml:275 - UML diagram saved as class_diagram.png
+2024-08-31 13:19:57.052 | INFO     | __main__:generate_logical_model:193 - Generating UML class diagram for database: sqlite:///northwind.db
+2024-08-31 13:20:06.753 | SUCCESS  | __main__:generate_logical_model:250 - Logical model generated successfully
+2024-08-31 13:20:06.754 | INFO     | __main__:visualize_uml:265 - Visualizing UML diagram
+2024-08-31 13:20:06.803 | ERROR    | __main__:visualize_uml:277 - Failed to generate UML diagram: 404, Content-Type: text/html;charset=iso-8859-1
+2024-08-31 13:20:06.803 | ERROR    | __main__:visualize_uml:280 - Error visualizing UML diagram: 404 Client Error: Not Found for url: http://localhost:8080/plantuml/png/1VbBjpswEL3zFVaOlVZqryhabTYh3ahRQkla7dULU2It2NQeVput-u81xGDseKVeeugp8ZvhMfPmMXCnkEps6ypSz4w3VNKa5BVVaoEo2VOLsMkFP7A3IB-jqI-QJUUohWSgyK-IkPk8_XJ7O6DnzYrEZLM7Jp-TTEcHeEdr0IFj8njU6ApULlmDTPAB_D3StwpFDdJlN2DPbkiWom4o95iXgiPNMQgeGVYTdFEUEvQNbRrDsz1lUE7KIyQVWqtqKQqHuOUoJxelJ8En8TV9veovqZtKnMFVbwA99bZUea2smfQhr63-uP-hS5MIalLbPZN4Wul5WOiBSXCRfyHKg56cJ0zyisCVQ7UTulx7nM_XnTAZNEKiOoqJLqOUe1mAXAFSVjlq9rgnpeFLpSjaHL3gN84wlSzvKsySxVZDX1vK8dK7zVsxlXfdDWluJX9bQ8jMJvSODy6NOoPK4Gerp1e46OHEmiYEfmfUYVxLYOUJbb9dkuurDrmyQwe6lugQ3xYdFrJGf7Vrj1FCMxlHxPC0DOpWawQ8tE1TsXeVDy-pYdYpyM4JljTgiw5SG35AkT9feUjteT8qJ5CB6LAtvEB17SZ9Y95CEbL3ZZiurQzmb9nQKnQeOUtqBHJZw6r9XxvWLBpaTps2D-bs04zc3JDZh5m7NOJL5YwrP1P_2DdRTO6hErxUBEUg0a50zSdBm6wgT-fIudMkfXS61prnVVuAikZskmdHFQ__e95Q7uSlHI-HN51PQ52NzoqHjUFeGI2iO-CF_hj4Aw==
+Traceback (most recent call last):
+
+  File "/Users/roli/development/workspaces/ai-services/physical-to-logical-datamodel-service/physical_to_logical_datamodel_service/app.py", line 305, in <module>
+    asyncio.run(main())
+    │       │   └ <function main at 0x103e457e0>
+    │       └ <function run at 0x102908160>
+    └ <module 'asyncio' from '/opt/homebrew/Cellar/python@3.10/3.10.14_1/Frameworks/Python.framework/Versions/3.10/lib/python3.10/a...
+
+  File "/opt/homebrew/Cellar/python@3.10/3.10.14_1/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+           │    │                  └ <coroutine object main at 0x103df6960>
+           │    └ <function BaseEventLoop.run_until_complete at 0x102e34ee0>
+           └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+
+  File "/opt/homebrew/Cellar/python@3.10/3.10.14_1/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x102e34e50>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+
+  File "/opt/homebrew/Cellar/python@3.10/3.10.14_1/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x102e36950>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+
+  File "/opt/homebrew/Cellar/python@3.10/3.10.14_1/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 1909, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x102de2320>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+
+  File "/opt/homebrew/Cellar/python@3.10/3.10.14_1/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+
+  File "/Users/roli/development/workspaces/ai-services/physical-to-logical-datamodel-service/physical_to_logical_datamodel_service/app.py", line 298, in main
+    visualize_uml(result)
+    │             └ '@startuml\nskinparam classAttributeIconSize 0\n\nclass Categories {\n  <<PK>> CategoryID : INTEGER\n  CategoryName : TEXT\n ...
+    └ <function visualize_uml at 0x103e45900>
+
+> File "/Users/roli/development/workspaces/ai-services/physical-to-logical-datamodel-service/physical_to_logical_datamodel_service/app.py", line 278, in visualize_uml
+    response.raise_for_status()
+    │        └ <function Response.raise_for_status at 0x10282cee0>
+    └ <Response [404]>
+
+  File "/Users/roli/Library/Caches/pypoetry/virtualenvs/physical-to-logical-datamodel-service-z7MxplmH-py3.10/lib/python3.10/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+          │         │                        └ <Response [404]>
+          │         └ '404 Client Error: Not Found for url: http://localhost:8080/plantuml/png/1VbBjpswEL3zFVaOlVZqryhabTYh3ahRQkla7dULU2It2NQeVput...
+          └ <class 'requests.exceptions.HTTPError'>
+
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: http://localhost:8080/plantuml/png/1VbBjpswEL3zFVaOlVZqryhabTYh3ahRQkla7dULU2It2NQeVput-u81xGDseKVeeugp8ZvhMfPmMXCnkEps6ypSz4w3VNKa5BVVaoEo2VOLsMkFP7A3IB-jqI-QJUUohWSgyK-IkPk8_XJ7O6DnzYrEZLM7Jp-TTEcHeEdr0IFj8njU6ApULlmDTPAB_D3StwpFDdJlN2DPbkiWom4o95iXgiPNMQgeGVYTdFEUEvQNbRrDsz1lUE7KIyQVWqtqKQqHuOUoJxelJ8En8TV9veovqZtKnMFVbwA99bZUea2smfQhr63-uP-hS5MIalLbPZN4Wul5WOiBSXCRfyHKg56cJ0zyisCVQ7UTulx7nM_XnTAZNEKiOoqJLqOUe1mAXAFSVjlq9rgnpeFLpSjaHL3gN84wlSzvKsySxVZDX1vK8dK7zVsxlXfdDWluJX9bQ8jMJvSODy6NOoPK4Gerp1e46OHEmiYEfmfUYVxLYOUJbb9dkuurDrmyQwe6lugQ3xYdFrJGf7Vrj1FCMxlHxPC0DOpWawQ8tE1TsXeVDy-pYdYpyM4JljTgiw5SG35AkT9feUjteT8qJ5CB6LAtvEB17SZ9Y95CEbL3ZZiurQzmb9nQKnQeOUtqBHJZw6r9XxvWLBpaTps2D-bs04zc3JDZh5m7NOJL5YwrP1P_2DdRTO6hErxUBEUg0a50zSdBm6wgT-fIudMkfXS61prnVVuAikZskmdHFQ__e95Q7uSlHI-HN51PQ52NzoqHjUFeGI2iO-CF_hj4Aw==
+2024-08-31 13:21:37.955 | INFO     | __main__:generate_logical_model:193 - Generating UML class diagram for database: sqlite:///northwind.db
+2024-08-31 13:21:43.630 | SUCCESS  | __main__:generate_logical_model:250 - Logical model generated successfully
+2024-08-31 13:21:43.631 | INFO     | __main__:visualize_uml:265 - Visualizing UML diagram
+2024-08-31 13:21:43.633 | ERROR    | __main__:visualize_uml:280 - Error visualizing UML diagram: Failed to parse: http://localhost:80801VbBjpswEL3zFVaOlXa1vaJotdmENFGjhJJ01asL08RasKk9VJtW_ffaxGBMHKmXHnpKeDM8Zt48DzwppBKbqozUK-M1lbQieUmVmiFK9rVBWOeC79lPIA9R1EbInCIchWSgyK-IkOk0_fj42KHn9YLEZL09JB-STEc7eEsr0IFD8uWg0QWoXLIameAd-LunbxSKCqTPbsGW3ZLMRVVTPmKeC440xyB4YFgO0FlRSNAPdGkMz-4qg-OgPEJSobUq56LwiBuOcnBTehJ8EF_St6v-kqouxRl89TpwpN6GqlErSybH0Kit9nL3TZcmEdSgtmcm8bTQ83DQiknwkX8hykpPbiRM8obAlUe1FbpcdzmdLo0wGdRCojqIgS69lDtZgFwAUlZ6arb4SErLl0pRNDmOgp85w1Sy3FSYJbONhj41lOOld5e3YCo33XVpfiV_W0PIzDZ0wweXRr1BZfC90dMrfHR_YnUdAl8Y9RiXEtjxhK5fk-T7yiBXdjCgbwmDjG1hsJA12rt9e_QS2sl4IoanZVG_Wivgvqnrkt1UPrykulmnII0THGnAFwZSa75Hkb9eeUjteDsqL5CBMNgGfkB57Sb9YN5AEbL3ZZi-rSw23rKhVegdOUdqBfJZw6r9XxvWLhp6HDZtD-bk_YTc3ZHJu4m_NOJL5YyryMO7fP3T-3Kc62W5t1ZM0pLmUDyfA2lu-cdkRXlR3sjrRx93R1of4KgvZZjZzzPu_hvKUOrgxR2TZygFP-rFGrmaJg_39-Fa-zUcPQEv9PfCHw==
+Traceback (most recent call last):
+
+  File "/Users/roli/Library/Caches/pypoetry/virtualenvs/physical-to-logical-datamodel-service-z7MxplmH-py3.10/lib/python3.10/site-packages/urllib3/util/url.py", line 425, in parse_url
+    host, port = _HOST_PORT_RE.match(host_port).groups()  # type: ignore[union-attr]
+                 │             │     └ 'localhost:80801VbBjpswEL3zFVaOlXa1vaJotdmENFGjhJJ01asL08RasKk9VJtW_ffaxGBMHKmXHnpKeDM8Zt48DzwppBKbqozUK-M1lbQieUmVmiFK9rVBWO...
+                 │             └ <method 'match' of 're.Pattern' objects>
+                 └ re.compile('^((?:[^\\[\\]%:/?#]|%[a-fA-F0-9]{2})*|(?:[0-9]{1,3}\\.){3}[0-9]{1,3}|\\[(?:(?:[0-9A-Fa-f]{1,4}:){6}(?:[0-9A-Fa-f]...
+
+AttributeError: 'NoneType' object has no attribute 'groups'
+
+
+The above exception was the direct cause of the following exception:
+
+
+Traceback (most recent call last):
+
+  File "/Users/roli/Library/Caches/pypoetry/virtualenvs/physical-to-logical-datamodel-service-z7MxplmH-py3.10/lib/python3.10/site-packages/requests/models.py", line 433, in prepare_url
+    scheme, auth, host, port, path, query, fragment = parse_url(url)
+                                                      │         └ 'http://localhost:80801VbBjpswEL3zFVaOlXa1vaJotdmENFGjhJJ01asL08RasKk9VJtW_ffaxGBMHKmXHnpKeDM8Zt48DzwppBKbqozUK-M1lbQieUmVmiF...
+                                                      └ <function parse_url at 0x105c11240>
+  File "/Users/roli/Library/Caches/pypoetry/virtualenvs/physical-to-logical-datamodel-service-z7MxplmH-py3.10/lib/python3.10/site-packages/urllib3/util/url.py", line 451, in parse_url
+    raise LocationParseError(source_url) from e
+          │                  └ 'http://localhost:80801VbBjpswEL3zFVaOlXa1vaJotdmENFGjhJJ01asL08RasKk9VJtW_ffaxGBMHKmXHnpKeDM8Zt48DzwppBKbqozUK-M1lbQieUmVmiF...
+          └ <class 'urllib3.exceptions.LocationParseError'>
+
+urllib3.exceptions.LocationParseError: Failed to parse: http://localhost:80801VbBjpswEL3zFVaOlXa1vaJotdmENFGjhJJ01asL08RasKk9VJtW_ffaxGBMHKmXHnpKeDM8Zt48DzwppBKbqozUK-M1lbQieUmVmiFK9rVBWOeC79lPIA9R1EbInCIchWSgyK-IkOk0_fj42KHn9YLEZL09JB-STEc7eEsr0IFD8uWg0QWoXLIameAd-LunbxSKCqTPbsGW3ZLMRVVTPmKeC440xyB4YFgO0FlRSNAPdGkMz-4qg-OgPEJSobUq56LwiBuOcnBTehJ8EF_St6v-kqouxRl89TpwpN6GqlErSybH0Kit9nL3TZcmEdSgtmcm8bTQ83DQiknwkX8hykpPbiRM8obAlUe1FbpcdzmdLo0wGdRCojqIgS69lDtZgFwAUlZ6arb4SErLl0pRNDmOgp85w1Sy3FSYJbONhj41lOOld5e3YCo33XVpfiV_W0PIzDZ0wweXRr1BZfC90dMrfHR_YnUdAl8Y9RiXEtjxhK5fk-T7yiBXdjCgbwmDjG1hsJA12rt9e_QS2sl4IoanZVG_Wivgvqnrkt1UPrykulmnII0THGnAFwZSa75Hkb9eeUjteDsqL5CBMNgGfkB57Sb9YN5AEbL3ZZi-rSw23rKhVegdOUdqBfJZw6r9XxvWLhp6HDZtD-bk_YTc3ZHJu4m_NOJL5YyryMO7fP3T-3Kc62W5t1ZM0pLmUDyfA2lu-cdkRXlR3sjrRx93R1of4KgvZZjZzzPu_hvKUOrgxR2TZygFP-rFGrmaJg_39-Fa-zUcPQEv9PfCHw==
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/Users/roli/development/workspaces/ai-services/physical-to-logical-datamodel-service/physical_to_logical_datamodel_service/app.py", line 305, in <module>
+    asyncio.run(main())
+    │       │   └ <function main at 0x107a557e0>
+    │       └ <function run at 0x106518160>
+    └ <module 'asyncio' from '/opt/homebrew/Cellar/python@3.10/3.10.14_1/Frameworks/Python.framework/Versions/3.10/lib/python3.10/a...
+
+  File "/opt/homebrew/Cellar/python@3.10/3.10.14_1/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+           │    │                  └ <coroutine object main at 0x107a06880>
+           │    └ <function BaseEventLoop.run_until_complete at 0x106a44ee0>
+           └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+
+  File "/opt/homebrew/Cellar/python@3.10/3.10.14_1/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x106a44e50>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+
+  File "/opt/homebrew/Cellar/python@3.10/3.10.14_1/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x106a46950>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+
+  File "/opt/homebrew/Cellar/python@3.10/3.10.14_1/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 1909, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x1069f2320>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+
+  File "/opt/homebrew/Cellar/python@3.10/3.10.14_1/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+
+  File "/Users/roli/development/workspaces/ai-services/physical-to-logical-datamodel-service/physical_to_logical_datamodel_service/app.py", line 298, in main
+    visualize_uml(result)
+    │             └ '@startuml\nskinparam classAttributeIconSize 0\n\nclass Categories {\n  <<PK>> CategoryID : INTEGER\n  CategoryName : TEXT\n ...
+    └ <function visualize_uml at 0x107a55900>
+
+> File "/Users/roli/development/workspaces/ai-services/physical-to-logical-datamodel-service/physical_to_logical_datamodel_service/app.py", line 270, in visualize_uml
+    response = requests.get(full_url)
+               │        │   └ 'http://localhost:80801VbBjpswEL3zFVaOlXa1vaJotdmENFGjhJJ01asL08RasKk9VJtW_ffaxGBMHKmXHnpKeDM8Zt48DzwppBKbqozUK-M1lbQieUmVmiF...
+               │        └ <function get at 0x10643eb00>
+               └ <module 'requests' from '/Users/roli/Library/Caches/pypoetry/virtualenvs/physical-to-logical-datamodel-service-z7MxplmH-py3.1...
+
+  File "/Users/roli/Library/Caches/pypoetry/virtualenvs/physical-to-logical-datamodel-service-z7MxplmH-py3.10/lib/python3.10/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+           │              │           │         └ {}
+           │              │           └ None
+           │              └ 'http://localhost:80801VbBjpswEL3zFVaOlXa1vaJotdmENFGjhJJ01asL08RasKk9VJtW_ffaxGBMHKmXHnpKeDM8Zt48DzwppBKbqozUK-M1lbQieUmVmiF...
+           └ <function request at 0x1062c8ca0>
+  File "/Users/roli/Library/Caches/pypoetry/virtualenvs/physical-to-logical-datamodel-service-z7MxplmH-py3.10/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           │       │              │           │      └ {'params': None}
+           │       │              │           └ 'http://localhost:80801VbBjpswEL3zFVaOlXa1vaJotdmENFGjhJJ01asL08RasKk9VJtW_ffaxGBMHKmXHnpKeDM8Zt48DzwppBKbqozUK-M1lbQieUmVmiF...
+           │       │              └ 'get'
+           │       └ <function Session.request at 0x10643e290>
+           └ <requests.sessions.Session object at 0x1089ab520>
+  File "/Users/roli/Library/Caches/pypoetry/virtualenvs/physical-to-logical-datamodel-service-z7MxplmH-py3.10/lib/python3.10/site-packages/requests/sessions.py", line 575, in request
+    prep = self.prepare_request(req)
+           │    │               └ <Request [GET]>
+           │    └ <function Session.prepare_request at 0x10643e200>
+           └ <requests.sessions.Session object at 0x1089ab520>
+  File "/Users/roli/Library/Caches/pypoetry/virtualenvs/physical-to-logical-datamodel-service-z7MxplmH-py3.10/lib/python3.10/site-packages/requests/sessions.py", line 484, in prepare_request
+    p.prepare(
+    │ └ <function PreparedRequest.prepare at 0x1062cbc70>
+    └ <PreparedRequest [GET]>
+  File "/Users/roli/Library/Caches/pypoetry/virtualenvs/physical-to-logical-datamodel-service-z7MxplmH-py3.10/lib/python3.10/site-packages/requests/models.py", line 367, in prepare
+    self.prepare_url(url, params)
+    │    │           │    └ OrderedDict()
+    │    │           └ 'http://localhost:80801VbBjpswEL3zFVaOlXa1vaJotdmENFGjhJJ01asL08RasKk9VJtW_ffaxGBMHKmXHnpKeDM8Zt48DzwppBKbqozUK-M1lbQieUmVmiF...
+    │    └ <function PreparedRequest.prepare_url at 0x1062cbf40>
+    └ <PreparedRequest [GET]>
+  File "/Users/roli/Library/Caches/pypoetry/virtualenvs/physical-to-logical-datamodel-service-z7MxplmH-py3.10/lib/python3.10/site-packages/requests/models.py", line 435, in prepare_url
+    raise InvalidURL(*e.args)
+          └ <class 'requests.exceptions.InvalidURL'>
+
+requests.exceptions.InvalidURL: Failed to parse: http://localhost:80801VbBjpswEL3zFVaOlXa1vaJotdmENFGjhJJ01asL08RasKk9VJtW_ffaxGBMHKmXHnpKeDM8Zt48DzwppBKbqozUK-M1lbQieUmVmiFK9rVBWOeC79lPIA9R1EbInCIchWSgyK-IkOk0_fj42KHn9YLEZL09JB-STEc7eEsr0IFD8uWg0QWoXLIameAd-LunbxSKCqTPbsGW3ZLMRVVTPmKeC440xyB4YFgO0FlRSNAPdGkMz-4qg-OgPEJSobUq56LwiBuOcnBTehJ8EF_St6v-kqouxRl89TpwpN6GqlErSybH0Kit9nL3TZcmEdSgtmcm8bTQ83DQiknwkX8hykpPbiRM8obAlUe1FbpcdzmdLo0wGdRCojqIgS69lDtZgFwAUlZ6arb4SErLl0pRNDmOgp85w1Sy3FSYJbONhj41lOOld5e3YCo33XVpfiV_W0PIzDZ0wweXRr1BZfC90dMrfHR_YnUdAl8Y9RiXEtjxhK5fk-T7yiBXdjCgbwmDjG1hsJA12rt9e_QS2sl4IoanZVG_Wivgvqnrkt1UPrykulmnII0THGnAFwZSa75Hkb9eeUjteDsqL5CBMNgGfkB57Sb9YN5AEbL3ZZi-rSw23rKhVegdOUdqBfJZw6r9XxvWLhp6HDZtD-bk_YTc3ZHJu4m_NOJL5YyryMO7fP3T-3Kc62W5t1ZM0pLmUDyfA2lu-cdkRXlR3sjrRx93R1of4KgvZZjZzzPu_hvKUOrgxR2TZygFP-rFGrmaJg_39-Fa-zUcPQEv9PfCHw==
+2024-08-31 13:23:12.527 | INFO     | __main__:generate_logical_model:193 - Generating UML class diagram for database: sqlite:///northwind.db
+2024-08-31 13:23:18.656 | SUCCESS  | __main__:generate_logical_model:250 - Logical model generated successfully
+2024-08-31 13:23:18.657 | INFO     | __main__:visualize_uml:265 - Visualizing UML diagram
+2024-08-31 13:23:18.769 | SUCCESS  | __main__:visualize_uml:275 - UML diagram saved as class_diagram.png
+2024-08-31 13:23:47.645 | INFO     | __main__:generate_logical_model:193 - Generating UML class diagram for database: sqlite:///northwind.db
+2024-08-31 13:23:54.907 | SUCCESS  | __main__:generate_logical_model:250 - Logical model generated successfully
+2024-08-31 13:23:54.909 | INFO     | __main__:visualize_uml:266 - Visualizing UML diagram
+2024-08-31 13:23:54.956 | SUCCESS  | __main__:visualize_uml:279 - UML diagram saved as class_diagram.png
+2024-09-05 19:12:32.923 | INFO     | __main__:generate_logical_model:193 - Generating UML class diagram for database: sqlite:///northwind.db
+2024-09-05 19:12:46.133 | SUCCESS  | __main__:generate_logical_model:212 - Logical model generated successfully
+2024-09-05 19:12:46.133 | INFO     | __main__:visualize_uml:228 - Visualizing UML diagram
+2024-09-05 19:12:46.299 | SUCCESS  | __main__:visualize_uml:241 - UML diagram saved as class_diagram.png
+2024-09-05 19:15:12.194 | INFO     | __main__:generate_logical_model:193 - Generating UML class diagram for database: sqlite:///northwind.db
+2024-09-05 19:15:22.076 | SUCCESS  | __main__:generate_logical_model:212 - Logical model generated successfully
+2024-09-05 19:15:22.076 | INFO     | __main__:generate_logical_model:193 - Generating UML class diagram for database: sqlite:///northwind.db
+2024-09-05 19:15:28.035 | SUCCESS  | __main__:generate_logical_model:212 - Logical model generated successfully
+2024-09-05 19:15:28.036 | INFO     | __main__:visualize_uml:228 - Visualizing UML diagram
+2024-09-05 19:15:28.081 | SUCCESS  | __main__:visualize_uml:241 - UML diagram saved as class_diagram.png
